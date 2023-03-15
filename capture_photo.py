@@ -6,7 +6,7 @@ import mediapipe as mp
 import cv2
 from google.colab.patches import cv2_imshow
 
-def take_photo(filename='photo.jpg', quality=0.8):
+def capture_photo(filename='photo.jpg', quality=0.8):
   js = Javascript('''
     async function takePhoto(quality) {
       const div = document.createElement('div');
