@@ -32,7 +32,7 @@ def capture_photo(filename='photo.jpg', quality=0.8):
       const canvas = document.createElement('canvas');
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
-      canvas.getContext('2d').drawImage(video, 0, 0);
+      canvas.getContext('2d').scale(1, -1).translate(0, -canvas.width).drawImage(video, 0, 0);
       stream.getVideoTracks()[0].stop();
       div.remove();
       return canvas.toDataURL('image/jpeg', quality);
