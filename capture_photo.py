@@ -1,4 +1,3 @@
-!pip install mediapipe opencv-python
 from IPython.display import display, Javascript
 from google.colab.output import eval_js
 from base64 import b64decode
